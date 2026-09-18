@@ -1,20 +1,35 @@
 {
   "name": "aequus",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "Aequus - Meteora DBC Launchpad",
   "scripts": {
-    "dev": "cd apps/web && npm run dev",
-    "build": "npm --prefix apps/web run build",
-    "start": "npm --prefix apps/web start",
-    "lint": "npm --prefix apps/web run lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
+    "@irys/sdk": "^0.2.11",
+    "@meteora-ag/dynamic-bonding-curve-sdk": "^1.0.0",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/wallet-adapter-wallets": "^0.19.32",
+    "@solana/web3.js": "^1.98.0",
+    "bn.js": "^5.2.1",
     "next": "^14.2.0",
     "react": "^18.3.0",
-    "react-dom": "^18.3.0"
+    "react-dom": "^18.3.0",
+    "recharts": "^2.12.0"
   },
-  "engines": {
-    "node": ">=20.0.0"
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.0",
+    "autoprefixer": "^10.4.19",
+    "pino-pretty": "^13.1.3",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4",
+    "typescript": "^5.5.0"
   }
 }
