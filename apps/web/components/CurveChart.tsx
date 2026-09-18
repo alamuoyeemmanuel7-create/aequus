@@ -2,8 +2,8 @@
 
 import { memo, useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { simulatePriceCurve } from '@aequus/curve-presets';
-import type { CurveSimInput } from '@aequus/curve-presets';
+import { simulatePriceCurve } from '../lib/curvePresets';
+import type { CurveSimInput } from '../lib/curvePresets';
 
 interface CurveChartProps {
   sim: CurveSimInput;

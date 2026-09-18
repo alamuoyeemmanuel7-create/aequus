@@ -1,5 +1,4 @@
 {
-  "buildCommand": "npm install -g pnpm && pnpm install && cd apps/web && pnpm build",
   "framework": "nextjs",
   "rootDirectory": "apps/web"
 }

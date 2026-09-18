@@ -2,8 +2,8 @@
 
 import { memo, useMemo } from 'react';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { simulateFeeCurve } from '@aequus/curve-presets';
-import type { CurveSimInput } from '@aequus/curve-presets';
+import { simulateFeeCurve } from '../lib/curvePresets';
+import type { CurveSimInput } from '../lib/curvePresets';
 
 interface FeeChartProps {
   sim: CurveSimInput;
