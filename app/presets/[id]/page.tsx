@@ -2,10 +2,16 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { getPreset } from '../../../lib/curvePresets';
+import { PRESETS, getPreset } from '../../../lib/curvePresets';
 import { CurveChart } from '../../../components/CurveChart';
 import { FeeChart } from '../../../components/FeeChart';
 import { LaunchPanel } from '../../../components/LaunchPanel';
+
+export function generateStaticParams() {
+  return PRESETS.map((preset) => ({
+    id: preset.meta.id,
+  }));
+}
 
 export default function PresetDetailPage() {
   const params = useParams();
