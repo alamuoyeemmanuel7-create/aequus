@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { PRESETS } from '@aequus/curve-presets';
+import type { Preset } from '../lib/curvePresets';
+import { PRESETS as CURVE_PRESETS } from '../lib/curvePresets';
 
 const COMPARISON_DATA = [
   {
@@ -103,7 +104,7 @@ export function ComparisonTable() {
     <div className="space-y-8">
       {/* Mobile-friendly comparison cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:hidden">
-        {PRESETS.map((preset) => (
+        {CURVE_PRESETS.map((preset) => (
           <Link
             key={preset.meta.id}
             href={`/presets/${preset.meta.id}`}
@@ -146,7 +147,7 @@ export function ComparisonTable() {
           <thead>
             <tr className="border-b border-white/10">
               <th className="text-left px-4 py-3 font-semibold text-white/80">Comparison</th>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <th key={preset.meta.id} className="text-left px-4 py-3 font-semibold text-white min-w-max">
                   <Link
                     href={`/presets/${preset.meta.id}`}
@@ -163,7 +164,7 @@ export function ComparisonTable() {
             {/* Asset Class */}
             <tr className="hover:bg-white/[0.02] transition">
               <td className="px-4 py-3 font-medium text-white/70">Asset Class</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80">
                   <span className="inline-block px-3 py-1 rounded-full bg-violet-500/15 text-violet-300 text-xs font-medium">
                     {PRESET_DATA[preset.meta.id]?.assetClass}
@@ -175,7 +176,7 @@ export function ComparisonTable() {
             {/* Pricing */}
             <tr className="hover:bg-white/[0.02] transition bg-white/[0.01]">
               <td className="px-4 py-3 font-medium text-white/70">Pricing</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80">
                   {preset.meta.premium ? (
                     <span className="inline-block px-3 py-1 rounded-full bg-amber-500/15 text-amber-300 text-xs font-medium">
@@ -193,7 +194,7 @@ export function ComparisonTable() {
             {/* Curve Shape */}
             <tr className="hover:bg-white/[0.02] transition">
               <td className="px-4 py-3 font-medium text-white/70">Curve Shape</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80 text-sm">
                   {PRESET_DATA[preset.meta.id]?.curveShape}
                 </td>
@@ -203,7 +204,7 @@ export function ComparisonTable() {
             {/* Fee Mode */}
             <tr className="hover:bg-white/[0.02] transition bg-white/[0.01]">
               <td className="px-4 py-3 font-medium text-white/70">Fee Mode</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80 text-sm">
                   <span className="inline-block px-2.5 py-1 rounded bg-blue-500/10 text-blue-300 text-xs border border-blue-500/20">
                     {PRESET_DATA[preset.meta.id]?.feeMode}
@@ -215,7 +216,7 @@ export function ComparisonTable() {
             {/* Base Fee */}
             <tr className="hover:bg-white/[0.02] transition">
               <td className="px-4 py-3 font-medium text-white/70">Base Fee</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80 text-sm">
                   {PRESET_DATA[preset.meta.id]?.baseFee}
                 </td>
@@ -225,7 +226,7 @@ export function ComparisonTable() {
             {/* Migration Fee */}
             <tr className="hover:bg-white/[0.02] transition bg-white/[0.01]">
               <td className="px-4 py-3 font-medium text-white/70">Migration Fee</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80 text-sm font-mono">
                   {PRESET_DATA[preset.meta.id]?.migrationFee}
                 </td>
@@ -235,7 +236,7 @@ export function ComparisonTable() {
             {/* Migration Pool Fee */}
             <tr className="hover:bg-white/[0.02] transition">
               <td className="px-4 py-3 font-medium text-white/70">DAMM v2 Pool Fee</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80 text-sm font-mono">
                   {PRESET_DATA[preset.meta.id]?.migrationPoolFee}
                 </td>
@@ -245,7 +246,7 @@ export function ComparisonTable() {
             {/* Use Case */}
             <tr className="hover:bg-white/[0.02] transition bg-white/[0.01]">
               <td className="px-4 py-3 font-medium text-white/70">Primary Use Case</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80 text-sm">
                   {PRESET_DATA[preset.meta.id]?.useCase}
                 </td>
@@ -255,7 +256,7 @@ export function ComparisonTable() {
             {/* Best For */}
             <tr className="hover:bg-white/[0.02] transition">
               <td className="px-4 py-3 font-medium text-white/70">Best For</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3 text-white/80 text-sm">
                   {PRESET_DATA[preset.meta.id]?.bestFor}
                 </td>
@@ -265,7 +266,7 @@ export function ComparisonTable() {
             {/* Action */}
             <tr className="hover:bg-white/[0.02] transition bg-white/[0.01] border-t-2 border-white/10">
               <td className="px-4 py-3 font-medium text-white/70">Action</td>
-              {PRESETS.map((preset) => (
+              {CURVE_PRESETS.map((preset) => (
                 <td key={preset.meta.id} className="px-4 py-3">
                   <Link
                     href={`/presets/${preset.meta.id}`}
