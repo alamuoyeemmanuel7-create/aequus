@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aequus/curve-presets": "workspace:*",
+    "@aequus/curve-presets": "file:../../../packages/curve-presets",
     "@irys/sdk": "^0.2.11",
     "@meteora-ag/dynamic-bonding-curve-sdk": "^1.0.0",
     "@solana/spl-token": "^0.4.13",
