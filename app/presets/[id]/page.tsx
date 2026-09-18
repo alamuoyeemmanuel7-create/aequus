@@ -79,14 +79,14 @@ export default function PresetDetailPage() {
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-white">Price Curve</h2>
           <div className="rounded-lg border border-white/10 bg-white/[0.02] p-6 h-80">
-            <CurveChart preset={preset} />
+            <CurveChart sim={preset.sim} />
           </div>
         </div>
 
         <div className="space-y-4">
           <h2 className="text-xl font-semibold text-white">Fee Schedule</h2>
           <div className="rounded-lg border border-white/10 bg-white/[0.02] p-6 h-80">
-            <FeeChart preset={preset} />
+            <FeeChart sim={preset.sim} />
           </div>
         </div>
       </div>
