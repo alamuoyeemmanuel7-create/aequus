@@ -1,6 +1,8 @@
-import { PRESETS } from '@aequus/curve-presets';
 import { HeroSection } from '../components/HeroSection';
 import { PresetCard } from '../components/PresetCard';
+
+// Mock presets for now
+const PRESETS = [];
 
 export default function HomePage() {
   return (
