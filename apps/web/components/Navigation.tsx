@@ -1,13 +1,19 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButtonWrapper } from './WalletButtonWrapper';
 
 export function Navigation() {
   const { connected } = useWallet();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Only render wallet-dependent content after hydration
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const navLinks = [
     { href: '/#presets', label: 'Presets' },
@@ -35,7 +41,7 @@ export function Navigation() {
                 {link.label}
               </Link>
             ))}
-            {connected && (
+            {isMounted && connected && (
               <Link href="/dashboard" className="text-white/70 hover:text-white transition text-sm font-medium">
                 Dashboard
               </Link>
@@ -44,7 +50,7 @@ export function Navigation() {
 
           {/* Right Side - Desktop */}
           <div className="hidden md:flex items-center gap-3 flex-shrink-0">
-            {connected && (
+            {isMounted && connected && (
               <Link
                 href="/dashboard"
                 className="inline-flex items-center justify-center gap-2 px-3 sm:px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs sm:text-sm font-medium transition min-h-[40px]"
@@ -60,7 +66,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2 flex-shrink-0">
-            {connected && (
+            {isMounted && connected && (
               <Link
                 href="/dashboard"
                 className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 text-white transition"
@@ -84,7 +90,7 @@ export function Navigation() {
               {link.label}
             </Link>
           ))}
-          {connected && (
+          {isMounted && connected && (
             <Link href="/dashboard" className="text-violet-400 hover:text-violet-300 transition font-medium">
               Dashboard
             </Link>
