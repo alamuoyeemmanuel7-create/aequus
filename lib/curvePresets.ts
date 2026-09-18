@@ -210,3 +210,20 @@ export const PRESETS: Preset[] = [
 export function getPreset(id: string): Preset | undefined {
   return PRESETS.find((p) => p.meta.id === id);
 }
+
+// Builder functions (mock implementations for deployment)
+// These would normally call @meteora-ag/dynamic-bonding-curve-sdk functions
+export const CURVE_BUILDERS: Record<string, () => any> = {
+  'stock-discovery': () => ({
+    // Placeholder curve config
+  }),
+  'rwa-steady': () => ({
+    // Placeholder curve config
+  }),
+  'icm-fast': () => ({
+    // Placeholder curve config
+  }),
+  'meme-classic': () => ({
+    // Placeholder curve config
+  }),
+};

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import type { Preset } from '@aequus/curve-presets';
+import type { Preset } from '../lib/curvePresets';
 import { createConfigForPreset, createPoolForConfig } from '../lib/dbc';
 import { unlockPreset } from '../lib/marketplace';
 import { uploadTokenMetadata } from '../lib/metadata';

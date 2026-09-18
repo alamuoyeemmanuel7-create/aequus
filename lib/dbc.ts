@@ -10,7 +10,7 @@
 import { Connection, Keypair, PublicKey, Transaction } from '@solana/web3.js';
 import { NATIVE_MINT } from '@solana/spl-token';
 import { DynamicBondingCurveClient, deriveDbcPoolAddress } from '@meteora-ag/dynamic-bonding-curve-sdk';
-import { CURVE_BUILDERS } from '@aequus/curve-presets';
+import { CURVE_BUILDERS } from '../lib/curvePresets';
 
 const RPC_URL = process.env.NEXT_PUBLIC_RPC_URL ?? 'https://api.devnet.solana.com';
 
