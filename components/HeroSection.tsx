@@ -28,18 +28,6 @@ export function HeroSection() {
           >
             Browse Presets
           </Link>
-          <Link
-            href="/compare"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/20 transition"
-          >
-            Compare All
-          </Link>
-          <Link
-            href="/docs"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/20 transition"
-          >
-            Learn More
-          </Link>
         </div>
       </div>
 
@@ -99,16 +87,7 @@ export function HeroSection() {
       </div>
 
       {/* Wallet Button - Visible on all screen sizes */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-4">
-        <div className="flex flex-wrap gap-3 text-sm">
-          <Link href="/pools" className="text-violet-300 hover:text-violet-200 transition">
-            View Launched Pools →
-          </Link>
-          <span className="text-white/20">•</span>
-          <Link href="/compare" className="text-violet-300 hover:text-violet-200 transition">
-            Compare Presets →
-          </Link>
-        </div>
+      <div className="flex flex-col sm:flex-row items-center justify-end gap-4 pt-4">
         <WalletMultiButtonWrapper />
       </div>
     </div>

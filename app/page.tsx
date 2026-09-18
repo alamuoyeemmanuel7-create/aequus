@@ -1,9 +1,6 @@
 import { HeroSection } from '../components/HeroSection';
 import { PresetCard } from '../components/PresetCard';
-import type { Preset } from '../lib/curvePresets';
-
-// Mock presets for now
-const PRESETS: Preset[] = [];
+import { PRESETS } from '../lib/curvePresets';
 
 export default function HomePage() {
   return (

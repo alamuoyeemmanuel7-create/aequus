@@ -17,9 +17,6 @@ export function Navigation() {
 
   const navLinks = [
     { href: '/#presets', label: 'Presets' },
-    { href: '/compare', label: 'Compare' },
-    { href: '/pools', label: 'Pools' },
-    { href: '/docs', label: 'Docs' },
   ];
 
   return (
