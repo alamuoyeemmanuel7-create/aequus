@@ -2,10 +2,10 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { PRESETS, getPreset } from '../../lib/curvePresets';
-import { CurveChart } from '../../components/CurveChart';
-import { FeeChart } from '../../components/FeeChart';
-import { LaunchPanel } from '../../components/LaunchPanel';
+import { PRESETS, getPreset } from '../../../lib/curvePresets';
+import { CurveChart } from '../../../components/CurveChart';
+import { FeeChart } from '../../../components/FeeChart';
+import { LaunchPanel } from '../../../components/LaunchPanel';
 
 export default function PresetDetailPage() {
   const params = useParams();
