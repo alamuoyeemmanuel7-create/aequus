@@ -1,21 +1,9 @@
 {
   "name": "aequus",
   "private": true,
-  "packageManager": "pnpm@9.0.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
-    "dev": "pnpm --filter @aequus/web dev",
-    "build": "pnpm --filter @aequus/web build",
-    "typecheck": "pnpm -r typecheck",
-    "create-config": "tsx scripts/create-config.ts",
-    "create-pool": "tsx scripts/create-pool.ts",
-    "compound-liquidity": "tsx scripts/compound-liquidity.ts"
-  },
-  "devDependencies": {
-    "tsx": "^4.16.0",
-    "typescript": "^5.5.0"
+    "dev": "cd apps/web && npm run dev",
+    "build": "cd apps/web && npm run build",
+    "start": "cd apps/web && npm run start"
   }
 }
