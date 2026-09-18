@@ -21,7 +21,7 @@ export default function PresetDetailPage({ params }: { params: { id: string } })
         <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-6">
           <h1 className="text-2xl font-bold text-red-400">Preset not found</h1>
           <p className="mt-2 text-red-300/70">
-            The preset "{presetId}" does not exist. Try one of: stock-discovery, rwa-steady, icm-fast, or meme-classic.
+            The preset "{presetId}" does not exist.
           </p>
         </div>
       </div>
