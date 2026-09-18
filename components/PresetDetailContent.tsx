@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 import type { Preset } from '../lib/curvePresets';
-import { CurveChart } from './CurveChart';
-import { FeeChart } from './FeeChart';
 import { LaunchPanel } from './LaunchPanel';
 
 export function PresetDetailContent({ preset }: { preset: Preset }) {
@@ -19,22 +17,6 @@ export function PresetDetailContent({ preset }: { preset: Preset }) {
         <h1 className="text-4xl font-bold text-white">{preset.meta.name}</h1>
         <p className="mt-2 text-lg text-white/70">{preset.meta.tagline}</p>
         <p className="mt-4 text-white/60">{preset.meta.description}</p>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-        <div>
-          <h2 className="text-xl font-semibold text-white mb-4">Price Curve</h2>
-          <div className="h-80 border border-white/10 rounded-lg bg-white/[0.02] p-4">
-            <CurveChart sim={preset.sim} />
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-xl font-semibold text-white mb-4">Fee Schedule</h2>
-          <div className="h-80 border border-white/10 rounded-lg bg-white/[0.02] p-4">
-            <FeeChart sim={preset.sim} />
-          </div>
-        </div>
       </div>
 
       <div className="mb-8">
