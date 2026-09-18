@@ -5,9 +5,9 @@
   "description": "Aequus - Meteora DBC Launchpad",
   "scripts": {
     "dev": "cd apps/web && npm run dev",
-    "build": "cd apps/web && npm run build",
-    "start": "cd apps/web && npm start",
-    "lint": "cd apps/web && npm run lint"
+    "build": "npm --prefix apps/web run build",
+    "start": "npm --prefix apps/web start",
+    "lint": "npm --prefix apps/web run lint"
   },
   "dependencies": {
     "next": "^14.2.0",
