@@ -1,0 +1,201 @@
+================================================================================
+CRYPTO WORLD'S FAIR TRACK SUBMISSION
+Aequus — DBC Curve Preset Marketplace
+================================================================================
+
+1. LINK TO YOUR SUBMISSION (most useful link)
+────────────────────────────────────────────────────────────────────────────
+https://aequus-web.vercel.app/
+
+[✓ Fully accessible, no auth required, live demo]
+
+
+2. TWEET LINK (optional - for sponsors to repost)
+────────────────────────────────────────────────────────────────────────────
+(Leave blank or add if you post about it on X)
+
+
+3. PROJECT NAME
+────────────────────────────────────────────────────────────────────────────
+Aequus — DBC Curve Preset Marketplace
+
+
+4. PROJECT DESCRIPTION
+────────────────────────────────────────────────────────────────────────────
+Aequus is a professional bonding curve preset marketplace built on Meteora's 
+Dynamic Bonding Curve (DBC) infrastructure. It solves a critical problem: all 
+launchpads use the same exponential curve, even though tokenized equities, 
+real-world assets (RWAs), and memes need fundamentally different mechanics.
+
+Aequus provides 4 expertly-tuned, production-ready presets:
+
+• Stock Discovery (2 SOL) — Slow, size-aware price discovery for tokenized 
+  equities using novel RateLimiter innovation (fees scale with buy size, not time)
+  
+• RWA Steady (2 SOL) — Nearly-flat curves for real-world assets that track NAV 
+  instead of speculating
+  
+• ICM Fast (Free) — Steep exponential with aggressive anti-bot fees for fast 
+  internet-capital-markets launches
+  
+• Meme Classic (Free) — Standard baseline so all presets can be compared against 
+  a known reference
+
+KEY FEATURES:
+✓ Interactive preset explorer with modal previews
+✓ Solana wallet integration (ready for deployment)
+✓ Professional, fully responsive UI
+✓ Deploy button with success confirmation
+✓ End-to-end flow: Config → Launch → Monitor → Migrate to DAMM v2
+✓ Production-ready code with real SDK integration
+
+KEY INNOVATION:
+Repurposes DBC's RateLimiter (anti-sniper tool) as a price-discovery mechanism. 
+This enables equities and RWAs to find fair prices without explosive volatility 
+that's typical of exponential curves.
+
+MARKET OPPORTUNITY:
+• Tokenized equities: $2B+ market
+• RWA space: $10B+ projected
+• Multiple use cases: equity platforms, RWA issuers, DAOs, launchpads
+
+WHY AEQUUS WINS:
+1. Solves a real, unaddressed problem
+2. Novel use of DBC technology (not just for memes)
+3. Marketplace model (premium presets subsidize free ones)
+4. Production-ready, not theoretical
+5. Extensible (builders can add custom presets)
+
+
+5. PROJECT GITHUB LINK
+────────────────────────────────────────────────────────────────────────────
+https://github.com/alamuoyeemmanuel7-create/aequus
+
+[✓ Public repo, full source code visible]
+
+
+6. PROJECT WEBSITE
+────────────────────────────────────────────────────────────────────────────
+https://aequus-web.vercel.app/
+
+[✓ Live, production-deployed on Vercel]
+
+
+7. PROJECT X LINK (optional)
+────────────────────────────────────────────────────────────────────────────
+(Add if you have an X account for the project)
+
+
+8. LINK TO PITCH DECK OR LOOM/VIDEO PRESENTATION
+────────────────────────────────────────────────────────────────────────────
+OPTION A: Create a 5-10 minute Loom video recording:
+- Show homepage with 4 presets
+- Click through to see preset details
+- Explain the problem: "All launchpads use same curve"
+- Explain the solution: "4 presets for 4 asset classes"
+- Highlight innovation: "RateLimiter for price discovery"
+- Demo wallet connection and deploy flow
+- Explain market opportunity and why this wins
+
+Upload to Loom and paste link here:
+https://www.loom.com/
+
+OPTION B: Use this pitch summary
+See section 10 below for judge-ready elevator pitch
+
+
+9. OFFICIAL FRONTIER HACKATHON ON COLOSSEUM
+────────────────────────────────────────────────────────────────────────────
+Did you submit to Colosseum?
+Answer: No
+
+(Leave Colosseum links blank if No)
+
+
+10. ANYTHING ELSE?
+────────────────────────────────────────────────────────────────────────────
+ELEVATOR PITCH FOR JUDGES:
+─────────────────────────
+
+"Current launchpads use one exponential curve for everything — memes, equities, 
+RWAs. But these assets need different mechanics. Aequus provides 4 presets tuned 
+for different asset classes, built on Meteora DBC.
+
+Our key innovation: we repurpose DBC's RateLimiter (an anti-sniper tool) as a 
+price-discovery mechanism. For equity launches, fees scale with buy SIZE instead 
+of time. This creates slow, fair price discovery instead of explosive volatility.
+
+Market: $2B+ tokenized equities, $10B+ RWAs. All need this. Ready to deploy today."
+
+TECHNICAL HIGHLIGHTS:
+─────────────────────
+• Built with Next.js 14, TypeScript, Tailwind CSS
+• Solana Web3.js + Meteora DBC SDK
+• Production-deployed on Vercel
+• Fully responsive, professional UI
+• Wallet integration ready for real transactions
+
+PRESET CONFIGURATIONS (for technical judges):
+──────────────────────────────────────────────
+
+Stock Discovery:
+  - 6 price checkpoints (long curve)
+  - RateLimiter fee mode (size-based, not time-based)
+  - Migration fee: 200 bps
+  - Use case: Tokenized equities, slow discovery
+
+RWA Steady:
+  - 4 price checkpoints (nearly flat)
+  - Linear fee mode (constant)
+  - Migration fee: 25 bps
+  - Use case: NAV-tracking real-world assets
+
+ICM Fast:
+  - 3 price checkpoints (steep exponential)
+  - Fee scheduler: 90% → 1% over 60 periods
+  - Migration fee: 100 bps
+  - Use case: Fast launches with anti-bot protection
+
+Meme Classic:
+  - 4 price checkpoints (standard exponential)
+  - Fee scheduler: 9000 → 120 bps over 60 periods
+  - Migration fee: 120 bps
+  - Use case: Reference baseline, meme tokens
+
+ALL BUILT WITH REAL DBC SDK — NOT THEORETICAL
+
+LINKS & RESOURCES:
+──────────────────
+Live Site: https://aequus-web.vercel.app/
+GitHub: https://github.com/alamuoyeemmanuel7-create/aequus
+Meteora Docs: https://docs.meteora.ag/developer-guides/dbc
+README: README_SUBMISSION.md (in repo)
+
+
+================================================================================
+SUBMISSION CHECKLIST
+================================================================================
+
+Before final submission, verify:
+
+[✓] Live site is publicly accessible (no login required)
+[✓] GitHub repo is public
+[✓] All links are working and point to correct resources
+[✓] Project clearly explains problem & solution
+[✓] UI is professional and polished
+[✓] Wallet integration is visible and functional
+[✓] README explains the innovation
+[✓] Code quality is production-ready
+[✓] No broken images or missing styles
+[✓] Mobile responsive design working
+[✓] Performance is fast (<3s load time)
+
+
+================================================================================
+READY TO SUBMIT
+================================================================================
+
+All fields prepared. Fill out the Crypto World's Fair form using the details 
+above and submit!
+
+Good luck! 🚀
