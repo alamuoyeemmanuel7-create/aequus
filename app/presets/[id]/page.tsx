@@ -12,51 +12,74 @@ export default function PresetDetailPage({ params }: { params: { id: string } })
 
   if (!preset) {
     return (
-      <div style={{ padding: '40px', backgroundColor: '#0b0b0f', color: 'white', minHeight: '100vh' }}>
-        <Link href="/">← Back</Link>
-        <h1 style={{ fontSize: '24px', color: 'red', marginTop: '40px' }}>Preset not found</h1>
+      <div className="space-y-6">
+        <Link href="/" className="text-violet-400 hover:text-violet-300">
+          ← Back to presets
+        </Link>
+        <div className="rounded-lg border border-red-500/30 bg-red-500/10 p-6">
+          <h1 className="text-2xl font-bold text-red-400">Preset not found</h1>
+        </div>
       </div>
     );
   }
 
   return (
-    <div style={{ padding: '40px', backgroundColor: '#0b0b0f', color: 'white', minHeight: '100vh' }}>
-      <Link href="/" style={{ color: '#6b9bff' }}>← Back</Link>
-      
-      <h1 style={{ fontSize: '48px', marginTop: '40px', marginBottom: '16px' }}>{preset.meta.name}</h1>
-      <p style={{ fontSize: '20px', opacity: 0.7, marginBottom: '40px' }}>{preset.meta.tagline}</p>
-      
-      <h2 style={{ fontSize: '24px', marginBottom: '16px' }}>About</h2>
-      <p style={{ marginBottom: '40px', lineHeight: '1.6' }}>{preset.meta.description}</p>
-
-      <h2 style={{ fontSize: '24px', marginBottom: '16px' }}>Details</h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '40px', marginBottom: '40px' }}>
+    <main className="space-y-12">
+      <div className="space-y-4">
+        <Link href="/" className="inline-block text-violet-400 hover:text-violet-300 transition">
+          ← Back to presets
+        </Link>
         <div>
-          <p style={{ opacity: 0.5, fontSize: '14px', marginBottom: '4px' }}>Asset Class</p>
-          <p>{preset.meta.assetClass}</p>
-        </div>
-        <div>
-          <p style={{ opacity: 0.5, fontSize: '14px', marginBottom: '4px' }}>Fee Mode</p>
-          <p>{preset.sim.baseFee.mode}</p>
-        </div>
-        <div>
-          <p style={{ opacity: 0.5, fontSize: '14px', marginBottom: '4px' }}>Supply</p>
-          <p>{preset.sim.totalTokenSupply}</p>
-        </div>
-        <div>
-          <p style={{ opacity: 0.5, fontSize: '14px', marginBottom: '4px' }}>Migration Fee</p>
-          <p>{preset.sim.migrationFeeBps} bps</p>
+          <h1 className="text-4xl font-bold text-white">{preset.meta.name}</h1>
+          <p className="mt-2 text-lg text-white/70">{preset.meta.tagline}</p>
+          <p className="mt-4 text-white/60 max-w-2xl">{preset.meta.description}</p>
         </div>
       </div>
 
-      <h2 style={{ fontSize: '24px', marginBottom: '16px' }}>Why this preset?</h2>
-      <ul style={{ marginBottom: '40px', paddingLeft: '20px' }}>
-        {preset.meta.rationale.map((reason, idx) => (
-          <li key={idx} style={{ marginBottom: '8px', lineHeight: '1.6' }}>
-            {reason}
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className="rounded-lg border border-white/10 bg-white/[0.02] p-6 space-y-3">
+        <h2 className="text-lg font-semibold text-white">Why this preset?</h2>
+        <ul className="space-y-2">
+          {preset.meta.rationale.map((reason, idx) => (
+            <li key={idx} className="flex gap-3 text-white/70">
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-violet-500/20 flex items-center justify-center text-violet-400 text-xs font-semibold">
+                {idx + 1}
+              </span>
+              <span>{reason}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="rounded-lg border border-white/10 bg-white/[0.02] p-6 space-y-4">
+        <h2 className="text-xl font-semibold text-white">Configuration</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div>
+            <div className="text-white/50 uppercase tracking-wider text-xs mb-1">Asset Class</div>
+            <div className="text-white font-medium capitalize">{preset.meta.assetClass.replace('-', ' ')}</div>
+          </div>
+          <div>
+            <div className="text-white/50 uppercase tracking-wider text-xs mb-1">Fee Mode</div>
+            <div className="text-white font-medium capitalize">{preset.sim.baseFee.mode.replace('-', ' ')}</div>
+          </div>
+          <div>
+            <div className="text-white/50 uppercase tracking-wider text-xs mb-1">Total Supply</div>
+            <div className="text-white font-medium">{preset.sim.totalTokenSupply.toLocaleString()} tokens</div>
+          </div>
+          <div>
+            <div className="text-white/50 uppercase tracking-wider text-xs mb-1">Migration Fee</div>
+            <div className="text-white font-medium">{preset.sim.migrationFeeBps} bps</div>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10 pt-6 text-sm text-white/50 space-y-2">
+        <p>
+          This preset compiles to a real DBC config via <code className="text-white/60">@meteora-ag/dynamic-bonding-curve-sdk</code>.
+        </p>
+        <p>
+          All presets are stored in <code className="text-white/60">lib/curvePresets.ts</code>.
+        </p>
+      </div>
+    </main>
   );
 }
