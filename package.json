@@ -9,8 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@irys/sdk": "^0.2.11",
-    "@meteora-ag/dynamic-bonding-curve-sdk": "^1.0.0",
     "@solana/spl-token": "^0.4.13",
     "@solana/wallet-adapter-base": "^0.9.23",
     "@solana/wallet-adapter-react": "^0.15.35",
