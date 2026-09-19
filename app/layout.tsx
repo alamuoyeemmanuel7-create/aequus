@@ -14,8 +14,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen bg-[#0b0b0f] text-white antialiased">
         <WalletProvider>
           <Navigation />
-          <main className="mx-auto max-w-6xl px-4 sm:px-6 py-6 sm:py-10">
-            {children}
+          <main className="w-full">
+            <div className="mx-auto max-w-6xl px-4 sm:px-6 py-6 sm:py-10">
+              {children}
+            </div>
           </main>
         </WalletProvider>
       </body>

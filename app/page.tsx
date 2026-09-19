@@ -1,10 +1,12 @@
+'use client';
+
 import { HeroSection } from '../components/HeroSection';
 import { PresetCard } from '../components/PresetCard';
 import { PRESETS } from '../lib/curvePresets';
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="min-h-screen">
       <HeroSection />
 
       {/* Presets Grid */}
