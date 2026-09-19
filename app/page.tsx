@@ -1,42 +1,42 @@
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
-      <div className="mb-20 space-y-8">
-        <div className="space-y-4">
-          <div className="inline-block rounded-full bg-violet-500/10 px-4 py-2 text-sm font-medium text-violet-300 border border-violet-500/20">
+    <main>
+      <div style={{ marginBottom: '80px', display: 'grid', gap: '32px' }}>
+        <div style={{ display: 'grid', gap: '16px' }}>
+          <div style={{ display: 'inline-block', borderRadius: '9999px', backgroundColor: 'rgba(139, 85, 255, 0.1)', padding: '8px 16px', fontSize: '14px', fontWeight: '500', color: '#ddd6fe', border: '1px solid rgba(139, 85, 255, 0.2)', width: 'fit-content' }}>
             Built on Meteora DBC + DAMM v2
           </div>
-          <h1 className="text-5xl sm:text-6xl font-bold tracking-tight text-white leading-tight">
+          <h1 style={{ fontSize: '56px', fontWeight: 'bold', color: 'white', lineHeight: '1.2', maxWidth: '800px' }}>
             Launchpad Presets for Every Asset Class
           </h1>
-          <p className="text-lg sm:text-xl text-white/70 max-w-2xl leading-relaxed">
-            Stop using one-size-fits-all exponential curves.
+          <p style={{ fontSize: '18px', color: 'rgba(255,255,255,0.7)', maxWidth: '600px', lineHeight: '1.6' }}>
+            Stop using one-size-fits-all exponential curves. Aequus provides opinionated, tuned bonding curve configurations for tokenized equities, RWAs, ICM tokens, and memes.
           </p>
         </div>
       </div>
 
-      <section id="presets" className="scroll-mt-20 mb-20">
-        <h2 className="mb-8 text-3xl font-bold text-white">Featured Presets</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <a href="/presets/stock-discovery" className="block rounded-xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-white/25 hover:bg-white/[0.06]">
-            <span className="rounded-full bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">Tokenized Equity</span>
-            <h3 className="mt-3 text-lg font-semibold text-white">Stock Discovery</h3>
-            <p className="mt-1 text-sm text-white/60">Slow, buy-size-aware price discovery</p>
+      <section id="presets" style={{ marginBottom: '80px' }}>
+        <h2 style={{ fontSize: '30px', fontWeight: 'bold', color: 'white', marginBottom: '32px' }}>Featured Presets</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px' }}>
+          <a href="/presets/stock-discovery" style={{ display: 'block', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.03)', padding: '20px', textDecoration: 'none', color: 'inherit', transition: 'all 0.2s' }}>
+            <span style={{ display: 'inline-block', borderRadius: '9999px', backgroundColor: 'rgba(139, 85, 255, 0.15)', padding: '6px 12px', fontSize: '12px', fontWeight: '500', color: '#ddd6fe' }}>Tokenized Equity</span>
+            <h3 style={{ marginTop: '12px', fontSize: '18px', fontWeight: '600', color: 'white' }}>Stock Discovery</h3>
+            <p style={{ marginTop: '8px', fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>Slow, buy-size-aware price discovery</p>
           </a>
-          <a href="/presets/rwa-steady" className="block rounded-xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-white/25 hover:bg-white/[0.06]">
-            <span className="rounded-full bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">RWA</span>
-            <h3 className="mt-3 text-lg font-semibold text-white">RWA Steady</h3>
-            <p className="mt-1 text-sm text-white/60">Near-flat curve for NAV-tracking</p>
+          <a href="/presets/rwa-steady" style={{ display: 'block', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.03)', padding: '20px', textDecoration: 'none', color: 'inherit' }}>
+            <span style={{ display: 'inline-block', borderRadius: '9999px', backgroundColor: 'rgba(139, 85, 255, 0.15)', padding: '6px 12px', fontSize: '12px', fontWeight: '500', color: '#ddd6fe' }}>RWA</span>
+            <h3 style={{ marginTop: '12px', fontSize: '18px', fontWeight: '600', color: 'white' }}>RWA Steady</h3>
+            <p style={{ marginTop: '8px', fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>Near-flat curve for NAV-tracking</p>
           </a>
-          <a href="/presets/icm-fast" className="block rounded-xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-white/25 hover:bg-white/[0.06]">
-            <span className="rounded-full bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">ICM</span>
-            <h3 className="mt-3 text-lg font-semibold text-white">ICM Fast</h3>
-            <p className="mt-1 text-sm text-white/60">Exponential curve for fast launches</p>
+          <a href="/presets/icm-fast" style={{ display: 'block', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.03)', padding: '20px', textDecoration: 'none', color: 'inherit' }}>
+            <span style={{ display: 'inline-block', borderRadius: '9999px', backgroundColor: 'rgba(139, 85, 255, 0.15)', padding: '6px 12px', fontSize: '12px', fontWeight: '500', color: '#ddd6fe' }}>ICM</span>
+            <h3 style={{ marginTop: '12px', fontSize: '18px', fontWeight: '600', color: 'white' }}>ICM Fast</h3>
+            <p style={{ marginTop: '8px', fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>Exponential curve for fast launches</p>
           </a>
-          <a href="/presets/meme-classic" className="block rounded-xl border border-white/10 bg-white/[0.03] p-5 transition hover:border-white/25 hover:bg-white/[0.06]">
-            <span className="rounded-full bg-violet-500/15 px-2.5 py-1 text-xs font-medium text-violet-300">Meme</span>
-            <h3 className="mt-3 text-lg font-semibold text-white">Meme Classic</h3>
-            <p className="mt-1 text-sm text-white/60">Standard exponential baseline</p>
+          <a href="/presets/meme-classic" style={{ display: 'block', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.03)', padding: '20px', textDecoration: 'none', color: 'inherit' }}>
+            <span style={{ display: 'inline-block', borderRadius: '9999px', backgroundColor: 'rgba(139, 85, 255, 0.15)', padding: '6px 12px', fontSize: '12px', fontWeight: '500', color: '#ddd6fe' }}>Meme</span>
+            <h3 style={{ marginTop: '12px', fontSize: '18px', fontWeight: '600', color: 'white' }}>Meme Classic</h3>
+            <p style={{ marginTop: '8px', fontSize: '14px', color: 'rgba(255,255,255,0.6)' }}>Standard exponential baseline</p>
           </a>
         </div>
       </section>

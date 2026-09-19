@@ -9,32 +9,26 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-[#0b0b0f] text-white">
-        {/* Navigation */}
-        <nav className="border-b border-white/10 bg-[#0b0b0f]">
-          <div className="px-4 py-4">
-            <div className="flex items-center justify-between">
-              <a href="/" className="flex items-center gap-2 font-bold text-white">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">Ⓐ</span>
-                </div>
-                <span>Aequus</span>
-              </a>
-              <a href="/#presets" className="text-white/70 hover:text-white">
-                Presets
-              </a>
-              <button className="px-4 py-2 bg-violet-600 text-white rounded">
-                Connect
-              </button>
-            </div>
+      <body style={{ backgroundColor: '#0b0b0f', color: 'white' }}>
+        {/* Navigation - using inline styles */}
+        <nav style={{ borderBottom: '1px solid rgba(255,255,255,0.1)', backgroundColor: '#0b0b0f', padding: '16px' }}>
+          <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <a href="/" style={{ display: 'flex', alignItems: 'center', gap: '8px', fontWeight: 'bold', color: 'white', textDecoration: 'none' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'linear-gradient(135deg, #a855f7, #9333ea)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <span style={{ color: 'white', fontWeight: 'bold' }}>Ⓐ</span>
+              </div>
+              <span>Aequus</span>
+            </a>
+            <a href="/#presets" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Presets</a>
+            <button style={{ padding: '8px 16px', backgroundColor: '#7c3aed', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer' }}>
+              Connect
+            </button>
           </div>
         </nav>
 
-        {/* Main Content */}
-        <main className="px-4 py-10">
-          <div className="max-w-6xl mx-auto">
-            {children}
-          </div>
+        {/* Main Content - using inline styles */}
+        <main style={{ padding: '40px 16px', maxWidth: '1280px', margin: '0 auto' }}>
+          {children}
         </main>
       </body>
     </html>
