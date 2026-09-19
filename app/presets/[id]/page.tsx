@@ -33,10 +33,23 @@ export default function PresetDetailPage({ params }: { params: { id: string } })
         
         <div className="space-y-4">
           <div>
-            <h2 className="text-lg font-semibold text-violet-300 mb-2">Configuration</h2>
+            <h2 className="text-lg font-semibold text-violet-300 mb-2">Price Checkpoints</h2>
             <pre className="bg-black/50 rounded p-4 text-sm text-violet-100 overflow-x-auto">
-              {JSON.stringify(preset.config, null, 2)}
+              {JSON.stringify(preset.sim.sqrtPriceCheckpoints, null, 2)}
             </pre>
+          </div>
+          <div>
+            <h2 className="text-lg font-semibold text-violet-300 mb-2">Fee Configuration</h2>
+            <div className="bg-black/50 rounded p-4 text-sm text-violet-100 space-y-2">
+              <p>Mode: <span className="text-violet-300 font-mono">{preset.sim.baseFee.mode}</span></p>
+              {preset.sim.baseFee.startingFeeBps && (
+                <p>Starting Fee: <span className="text-violet-300 font-mono">{preset.sim.baseFee.startingFeeBps} bps</span></p>
+              )}
+              {preset.sim.baseFee.endingFeeBps && (
+                <p>Ending Fee: <span className="text-violet-300 font-mono">{preset.sim.baseFee.endingFeeBps} bps</span></p>
+              )}
+              <p>Migration Fee: <span className="text-violet-300 font-mono">{preset.sim.migrationFeeBps} bps</span></p>
+            </div>
           </div>
         </div>
       </div>
