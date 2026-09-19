@@ -5,7 +5,7 @@ import { Navigation } from '../components/Navigation';
 
 export const metadata: Metadata = {
   title: 'Aequus — DBC Curve Preset Marketplace',
-  description: 'Curve and fee presets for tokenized equities, RWAs, ICM launches and memes.',
+  description: 'Curve and fee presets for tokenized equities, RWAs, ICM launches and memes. Built on Meteora DBC + DAMM v2.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
