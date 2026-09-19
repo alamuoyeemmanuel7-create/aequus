@@ -1,4 +1,3 @@
-import { PresetDetailContent } from '../../../components/PresetDetailContent';
 import { PRESETS, getPreset } from '../../../lib/curvePresets';
 
 export function generateStaticParams() {
@@ -23,5 +22,24 @@ export default function PresetDetailPage({ params }: { params: { id: string } })
     );
   }
 
-  return <PresetDetailContent preset={preset} />;
+  return (
+    <div className="space-y-6 py-12">
+      <a href="/" className="text-violet-400 hover:text-violet-300">
+        ← Back to presets
+      </a>
+      <div className="rounded-lg border border-violet-500/30 bg-violet-500/10 p-8">
+        <h1 className="text-4xl font-bold text-white mb-4">{preset.meta.name}</h1>
+        <p className="text-violet-200 mb-6">{preset.meta.description}</p>
+        
+        <div className="space-y-4">
+          <div>
+            <h2 className="text-lg font-semibold text-violet-300 mb-2">Configuration</h2>
+            <pre className="bg-black/50 rounded p-4 text-sm text-violet-100 overflow-x-auto">
+              {JSON.stringify(preset.config, null, 2)}
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
