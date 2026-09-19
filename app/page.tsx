@@ -2,7 +2,27 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { useWallet } from '@solana/wallet-adapter-react';
 import { PRESETS } from '../lib/curvePresets';
+
+function WalletStatusSection() {
+  const { connected, publicKey } = useWallet();
+
+  if (!connected || !publicKey) return null;
+
+  return (
+    <div className="space-y-4 p-6 rounded-lg bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/30">
+      <div className="flex items-center gap-3">
+        <div className="w-3 h-3 rounded-full bg-emerald-400 animate-pulse" />
+        <div>
+          <h3 className="text-lg font-bold text-white">Wallet Connected</h3>
+          <p className="text-sm text-white/70 font-mono">{publicKey.toBase58()}</p>
+        </div>
+      </div>
+      <p className="text-white/80">You're ready to deploy a preset! Select one below and follow the flow to launch your bonding curve.</p>
+    </div>
+  );
+}
 
 export default function HomePage() {
   const [selectedPreset, setSelectedPreset] = useState<string | null>(null);
@@ -171,6 +191,9 @@ export default function HomePage() {
           </div>
         </div>
       )}
+
+      {/* Wallet Connected Info */}
+      <WalletStatusSection />
 
       {/* How It Works */}
       <section className="space-y-8">
