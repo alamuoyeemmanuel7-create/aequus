@@ -12,11 +12,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <style>{`
           * { margin: 0; padding: 0; box-sizing: border-box; }
           body { background-color: #0b0b0f; color: white; font-family: system-ui; }
-          nav { background-color: #1a1a23; padding: 20px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
-          nav h1 { margin: 0; }
-          nav div { display: flex; gap: 20px; align-items: center; }
-          nav a { color: white; text-decoration: none; }
+          nav { background-color: #1a1a23; padding: 20px 40px; border-bottom: 1px solid #333; display: flex; justify-content: space-between; align-items: center; }
+          nav h1 { margin: 0; font-size: 20px; }
+          nav .nav-links { display: flex; gap: 30px; align-items: center; flex: 1; margin-left: 50px; }
+          nav a { color: white; text-decoration: none; font-size: 14px; }
+          nav a:hover { color: #a855f7; }
+          nav .nav-right { display: flex; gap: 15px; align-items: center; }
           nav button { padding: 10px 20px; background-color: #7c3aed; color: white; border: none; cursor: pointer; border-radius: 4px; }
+          nav button:hover { background-color: #6d28d9; }
           .content { padding: 40px; max-width: 1200px; margin: 0 auto; }
           h1 { margin-bottom: 16px; font-size: 32px; }
           h2 { margin: 32px 0 16px 0; font-size: 24px; }
@@ -31,8 +34,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <nav>
           <h1>AEQUUS</h1>
-          <div>
+          <div className="nav-links">
+            <a href="/">Home</a>
             <a href="/#presets">Presets</a>
+            <a href="/pools">Pools</a>
+            <a href="/docs">Docs</a>
+          </div>
+          <div className="nav-right">
             <button>Connect</button>
           </div>
         </nav>
